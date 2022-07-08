@@ -1,32 +1,31 @@
 
-import { quizQuestions } from "./questions";
-
+import quizQuestions from "./questions/questions";
 
 //GLOBAL VARIABLES
 const question =document.querySelector(".quiz__question")
 
-import confetti from "canvas-confetti"
 //^need to do this
 
-// show questions in chronological order (will get harder?)
-
-//show first question with related picture
-
-// display 3 different answers for each question
-
-// when the correct answer is pressed confetti cannon will work
-//when incorrect anser is pressed will go red and reset game??
-// there will not be a time pressure 
-//if reset is pressed will take user back to the start
-
-
-
+question.innerHTML ="welcome to the quiz"
 //FIRST SECTION: CHOOSE THE QUESTIONS
  // put the questions and answers in
 
 // use object literals to represent the individual questions
 // and an array to hold all of the questions that make up our quiz. 
 //Using an array will make the questions easy to iterate over:
+// each question is an object
+
+
+
+
+//for each loop for the questions
+
+
+
+
+
+
+
 
 
 
