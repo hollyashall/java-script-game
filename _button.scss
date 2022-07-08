@@ -5,18 +5,22 @@
     flex-direction: column;
     width: 70%;
     align-items: center;
-    border-radius: 12px ;
+    border-radius: 5px ;
     gap: 1.05rem; 
+    color: rgb(255, 255, 255);
+    
 
     .button-next{
-      background-color: pink;
+      background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
+      color: black;
     }
   }
 
 
 
   .button-reset{
-    background-color: rgb(150, 226, 43);
+    background-color: rgb(43, 195, 226);
+
   }
 
 
@@ -25,7 +29,8 @@
       height: 30%;
       width: 30%;
       align-items: center;
-    
+    display: flex;
+    flex-direction: row;
      
     }
   }

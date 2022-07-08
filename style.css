@@ -2,6 +2,9 @@
   color: black;
   height: 80%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -16,6 +19,8 @@
   grid-template-columns: repeat(3, 1fr);
   height: 100%;
   padding: 2rem;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 
 .quiz__question {
@@ -30,13 +35,17 @@
 .quiz__solutions {
   grid-row-start: 3;
   grid-column-start: 2;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   width: 80%;
-  height: 15%;
-  align-items: center;
+  height: 100%;
   border-radius: 12px;
   gap: 1.05rem;
+}
+
+.quiz__solution-button {
+  background-image: linear-gradient(135deg, #F6CEEC 10%, #D939CD 100%);
+  border-radius: 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -54,15 +63,17 @@
   flex-direction: column;
   width: 70%;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 5px;
   gap: 1.05rem;
+  color: rgb(255, 255, 255);
 }
 .button .button-next {
-  background-color: pink;
+  background-image: linear-gradient(135deg, #FFF6B7 10%, #F6416C 100%);
+  color: black;
 }
 
 .button-reset {
-  background-color: rgb(150, 226, 43);
+  background-color: rgb(43, 195, 226);
 }
 
 @media screen and (min-width: 768px) {
@@ -70,6 +81,8 @@
     height: 30%;
     width: 30%;
     align-items: center;
+    display: flex;
+    flex-direction: row;
   }
 }
 * {
