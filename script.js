@@ -1,4 +1,13 @@
 
+import { quizQuestions } from "./questions";
+
+
+//GLOBAL VARIABLES
+const question =document.querySelector(".quiz__question")
+
+import confetti from "canvas-confetti"
+//^need to do this
+
 // show questions in chronological order (will get harder?)
 
 //show first question with related picture

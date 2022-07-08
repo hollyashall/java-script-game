@@ -1,6 +1,7 @@
 export const quizQuestions =[
 {
   question:'What is the rarest M&M color?',
+  
   img:
   solutions:[
     { text: "pink", isCorrect: false },
@@ -32,7 +33,7 @@ export const quizQuestions =[
     { text: "July", isCorrect: false },
     { text: "January", isCorrect: true }, 
     { text: "June", isCorrect: false },
-             
+            
 ]}
 
 
