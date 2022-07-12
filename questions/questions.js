@@ -1,7 +1,7 @@
-export const quizQuestions =[
+export const quizQuestions = [
 {
   question:'What is the rarest M&M color?',
-  img:
+  img:"",
   solutions: 
   [
     { text: 'pink', isCorrect: false },
@@ -11,7 +11,7 @@ export const quizQuestions =[
 },
 {
   question:'Which country invented ice cream?',
-  img:
+  img:"",
   solutions:[
     { text: 'china', isCorrect: true }, 
     { text: 'italy', isCorrect: false },
@@ -21,7 +21,7 @@ export const quizQuestions =[
 
 {
   question:'Which type of pasta’s name means “little worms”?',
-  img:
+  img:"",
   solutions:[
     { text: 'spaghetti', isCorrect: false },
     { text: 'fusilli', isCorrect: false },
@@ -31,7 +31,7 @@ export const quizQuestions =[
 
 {
   question:'English Toffee Day is in which month?',
-  img:
+  img:"",
   solutions:[
     { text: 'July', isCorrect: false },
     { text: 'January', isCorrect: true }, 
