@@ -1,7 +1,7 @@
 export const quizQuestions = [
 {
   question:'What is the rarest M&M color?',
-  img:"",
+  imgSrc: './images/M&M_spokescandies.jpeg',
   solutions: 
   [
     { text: 'pink', isCorrect: false },

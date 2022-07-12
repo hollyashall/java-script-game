@@ -21,6 +21,7 @@ grid-column-start: 2;
 .quiz__image{
 grid-row-start: 2;
 grid-column-start: 2;
+height: 40%;
 }
 
 .quiz__solutions{
@@ -49,5 +50,11 @@ grid-column-start: 2;
     align-items: center;
     border-radius: 12px ;
   }
+
+  .quiz__image{
+    // grid-row-start: 2;
+    // grid-column-start: 2;
+    height: 5rem;
+    }
 }
   
