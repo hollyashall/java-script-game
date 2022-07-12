@@ -30,7 +30,7 @@
 .quiz__image {
   grid-row-start: 2;
   grid-column-start: 2;
-  height: 40%;
+  height: 4rem;
 }
 
 .quiz__solutions {
