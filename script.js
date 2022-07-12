@@ -58,16 +58,26 @@ console.log(quizInfo.solutions[2].isCorrect);
 console.log(answers);
 
 const checkSolutions = () => {
-  answers.addEventListener("click", () => {
-    if (console.log(quizInfo.solutions[0].isCorrect) == true) {
-      alert = "well done ";
-    } else if (console.log(quizInfo.solutions[0].isCorrect) != true) {
-      alert = "try again";
-    }
+  answers.forEach((answer, index) => {
+    answer.addEventListener("click", () => {
+      console.log(quizInfo.solutions[index].isCorrect);
+      if (quizInfo.solutions[index].isCorrect == true) {
+        alert("well done ");
+      } else {
+        alert("try again");
+      }
+    });
   });
 };
-
-
-
+checkSolutions();
 
 //End of quiz show score
+// add in a score
+
+//reset button
+
+const handleReset = (event) => {
+  quizInfo = quizQuestions[0];
+  questionContainer();
+};
+resetButton.addEventListener("click", handleReset);
