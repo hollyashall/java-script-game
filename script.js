@@ -18,7 +18,9 @@ let answerCorrectGiven = false;
 let sec = 20;
 let time = setInterval(myTimer, 1000);
 
-//timer
+//TIMER
+  // seconds decrease by 1 each second 
+  //timer runs for whole quiz
 
 function myTimer() {
   document.getElementById('timer').innerHTML = sec + " seconds left to complete the quiz!!";
@@ -26,11 +28,12 @@ function myTimer() {
   if (sec == -1) {
       clearInterval(time);
       alert("STOP, OUT OF TIME !");
+      
   }
 }
-// myTimer();
 
-// next question
+//NEXT QUESTION
+  //user is able to change question upon click
 
 nextButton.addEventListener("click", () => {
   answerCorrectGiven = false;
@@ -45,6 +48,8 @@ nextButton.addEventListener("click", () => {
 
 let quizInfo = quizQuestions[questionNumber];
 
+//DISPLAY INFO
+  //using the properties of complex data types to put the objects onto the container.
 const questionContainer = () => {
   question.innerHTML = quizInfo.question;
   console.log(question);
@@ -55,14 +60,11 @@ const questionContainer = () => {
   answerB.innerText = quizInfo.solutions[1].text;
   answerC.innerText = quizInfo.solutions[2].text;
 };
-
 questionContainer();
 
-//click the answers and see if write or wrong
-
-// when you click on correct answer get a message telling you correct or try again
-
-console.log(answers);
+//CHECK ANSWERS
+  //click the answers and see if write or wrong
+  // when you click on correct answer get a message telling you correct or try again
 
 const checkSolutions = () => {
   answers.forEach((answer, index) => {
@@ -75,22 +77,16 @@ const checkSolutions = () => {
         scoreAccumulating++;
         quizScore.innerText = "Score : " + scoreAccumulating;
       } else {
-        alert("try again");
+        alert("Incorrect! move onto the next question!");
       }
     });
   });
 };
 checkSolutions();
 
-//score
-console.log(quizScore);
 
-console.log(scoreAccumulating);
-
-
-
-
-//reset button
+//RESET BUTTON
+  // resets all the variables; time, score and brings the questions back to the start.
 
 const handleReset = (event) => {
   questionNumber = 0;
