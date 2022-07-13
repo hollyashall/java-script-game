@@ -77,6 +77,7 @@ checkSolutions();
 //reset button
 
 const handleReset = (event) => {
+  questionNumber = 0;
   quizInfo = quizQuestions[0];
   questionContainer();
 };
