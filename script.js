@@ -72,7 +72,6 @@ console.log(quizScore);
 
 console.log(scoreAccumulating);
 
-//timer
 
 
 
@@ -87,3 +86,5 @@ const handleReset = (event) => {
   quizScore.innerText = +scoreAccumulating;
 };
 resetButton.addEventListener("click", handleReset);
+
+//timer
