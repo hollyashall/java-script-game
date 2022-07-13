@@ -15,12 +15,21 @@
 }
 
 .quiz__score{
-  grid-row-start:0
-  grid-column-start: 1;
-
+color: #D939CD;
+font-weight: bolder;
+display: flex;
+flex-direction: column;
+background-color: rgb(174, 240, 240) ;
+width: 5rem;
+height: 2rem;
+text-align: center;
+border-radius: 8px;
 }
+
 .quiz__question{
 grid-column-start: 2;
+font-weight: 300;
+font-size: larger;
 }
 
 .quiz__image{

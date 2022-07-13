@@ -10,6 +10,7 @@ const images = document.querySelector(".quiz__image");
 const nextButton = document.querySelector(".button-next");
 const resetButton = document.querySelector(".button-reset");
 const quizContainer = document.querySelectorAll(".quiz");
+const quizScore = document.querySelector(".quiz__score");
 
 // and an array to hold all of the questions that make up  quiz.
 //Using an array will make the questions easy to iterate over:
@@ -21,6 +22,7 @@ const quizContainer = document.querySelectorAll(".quiz");
 // use object literals to represent the individual questions
 
 let questionNumber = 0;
+let scoreAccumulating = 0;
 
 nextButton.addEventListener("click", () => {
   questionNumber = questionNumber + 1;
@@ -49,12 +51,6 @@ questionContainer();
 
 // when you click on correct answer get a message telling you correct or try again
 
-// if or else statement
-
-console.log(quizInfo.solutions[0].isCorrect);
-console.log(quizInfo.solutions[1].isCorrect);
-console.log(quizInfo.solutions[2].isCorrect);
-
 console.log(answers);
 
 const checkSolutions = () => {
@@ -62,7 +58,9 @@ const checkSolutions = () => {
     answer.addEventListener("click", () => {
       console.log(quizInfo.solutions[index].isCorrect);
       if (quizInfo.solutions[index].isCorrect == true) {
-        alert("well done ");
+        alert("well done you can move on to the next question!!");
+        scoreAccumulating++;
+        quizScore.innerText = +scoreAccumulating;
       } else {
         alert("try again");
       }
@@ -71,8 +69,12 @@ const checkSolutions = () => {
 };
 checkSolutions();
 
-//End of quiz show score
-// add in a score
+//score
+console.log(quizScore);
+
+console.log(scoreAccumulating);
+
+//add confetti canon when the score is correct
 
 //reset button
 
@@ -80,5 +82,8 @@ const handleReset = (event) => {
   questionNumber = 0;
   quizInfo = quizQuestions[0];
   questionContainer();
+  scoreAccumulating = 0;
+  console.log(scoreAccumulating);
+  quizScore.innerText = +scoreAccumulating;
 };
 resetButton.addEventListener("click", handleReset);
