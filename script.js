@@ -15,9 +15,11 @@ const quizScore = document.querySelector(".quiz__score");
 let questionNumber = 0;
 let scoreAccumulating = 0;
 let answerCorrectGiven = false;
+let sec = 15;
+let time = setInterval(myTimer, 1000);
 
 
-// next 
+// next question
 
 nextButton.addEventListener("click", () => {
   answerCorrectGiven = false;
@@ -26,6 +28,7 @@ nextButton.addEventListener("click", () => {
   //re assigning quiz info based on question
   console.log(quizQuestions[questionNumber]);
   questionContainer();
+ 
 });
 
 let quizInfo = quizQuestions[questionNumber];
@@ -88,3 +91,17 @@ const handleReset = (event) => {
 resetButton.addEventListener("click", handleReset);
 
 //timer
+
+
+
+
+//the 1000 gives the time for next function
+
+function myTimer() {
+    document.getElementById('timer').innerHTML = sec + " seconds left ";
+    sec--;
+    if (sec == -1) {
+        clearInterval(time);
+        alert("STOP, OUT OF TIME !");
+    }
+}
