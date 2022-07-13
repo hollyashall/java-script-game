@@ -12,19 +12,15 @@ const resetButton = document.querySelector(".button-reset");
 const quizContainer = document.querySelectorAll(".quiz");
 const quizScore = document.querySelector(".quiz__score");
 
-// and an array to hold all of the questions that make up  quiz.
-//Using an array will make the questions easy to iterate over:
-// each question is an object
-
-//FIRST SECTION: CHOOSE THE QUESTIONS: put in container
-// put the questions and answers in
-
-// use object literals to represent the individual questions
-
 let questionNumber = 0;
 let scoreAccumulating = 0;
+let answerCorrectGiven = false;
+
+
+// next 
 
 nextButton.addEventListener("click", () => {
+  answerCorrectGiven = false;
   questionNumber = questionNumber + 1;
   quizInfo = quizQuestions[questionNumber];
   //re assigning quiz info based on question
@@ -57,10 +53,12 @@ const checkSolutions = () => {
   answers.forEach((answer, index) => {
     answer.addEventListener("click", () => {
       console.log(quizInfo.solutions[index].isCorrect);
-      if (quizInfo.solutions[index].isCorrect == true) {
+      //given correct answer and havent already tried to give right answer
+      if (quizInfo.solutions[index].isCorrect == true && answerCorrectGiven === false) {
         alert("well done you can move on to the next question!!");
+        answerCorrectGiven = true;
         scoreAccumulating++;
-        quizScore.innerText = +scoreAccumulating;
+        quizScore.innerText = "Score : " + scoreAccumulating;
       } else {
         alert("try again");
       }
@@ -74,7 +72,9 @@ console.log(quizScore);
 
 console.log(scoreAccumulating);
 
-//add confetti canon when the score is correct
+//timer
+
+
 
 //reset button
 
