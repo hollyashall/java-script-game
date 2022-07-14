@@ -96,6 +96,8 @@ const handleReset = (event) => {
   console.log(scoreAccumulating);
   quizScore.innerText = +scoreAccumulating;
   sec = 20;
+  console.log(sec);
+  document.getElementById('timer').innerHTML = sec + " seconds left to complete the quiz!!";
 };
 resetButton.addEventListener("click", handleReset);
 
